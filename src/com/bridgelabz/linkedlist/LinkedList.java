@@ -8,20 +8,20 @@ public Node<T> tail;
 public void push(T data) {
 	Node<T> node = new Node<>(data);
 	if(head == null) {
-		head = node;
+		head = node;    
 		tail = node;
-	}else {
+		}else {
 		node.setNext(head);
-		head = node;
+		head = node; 
 	}	
 }
 public void add(T data) {
 	Node<T> node = new Node(data);
-	if(head == null) {
-		head = node;
-		tail = node;
+	if(head == null) {   
+		head = node; 
+		tail = node;     
 	}else {
-		tail.setNext(node);
+		tail.setNext(node); 
 		tail = node;
 	}
 }
@@ -39,4 +39,6 @@ public void show() {
 		}
 	}
 }
+
+
 
