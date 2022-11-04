@@ -51,6 +51,13 @@ public class LinkedListMain {
     else
         System.out.println("Element Found");
     list1.show();
-	}    
-	}
+    boolean success = list2.searchAndInsert(30, 40);
+    if (success)
+        System.out.println("Searched And Inserted Element!");
+    else
+        System.out.println("Unsuccessfull!!");
+    list2.show();
+    }    
+ }    
+
 

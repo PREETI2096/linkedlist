@@ -1,6 +1,6 @@
 package com.bridgelabz.linkedlist;
 
-import com.bridgelabz.datastructure.demo.MyNode;
+
 
 public class LinkedList<T> {
 	
@@ -41,7 +41,6 @@ public void insert(T data) {
 	Node <T> node = new Node(data);
 	if(head == null) {
      	head = node;
-		//tail = node;
 	}else {
 		Node<T> temp = head;
 		while(temp.getNext() != null) {
@@ -77,7 +76,6 @@ public T popLast() {
         return data;
     }
 }
-
 public Node<T> search(T searchData){
   Node<T> temp = head;
   while(temp != null) {
@@ -86,6 +84,19 @@ public Node<T> search(T searchData){
       temp = (Node<T>) temp.getNext();
   }
 	return null;
+}
+
+public boolean searchAndInsert(T searchData, T insertData) {
+    Node<T> newNode = new Node(insertData);
+    Node<T> searchedNode = search(searchData);
+    if (searchedNode == null)
+        return false;
+    else {
+        newNode.setNext(searchedNode.getNext());
+        searchedNode.setNext(newNode);
+        return true;
+    }
+
 }
 
 public void show() {
