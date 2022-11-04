@@ -1,5 +1,7 @@
 package com.bridgelabz.linkedlist;
 
+import com.bridgelabz.datastructure.demo.MyNode;
+
 public class LinkedList<T> {
 	
 public Node<T> head;
@@ -74,6 +76,16 @@ public T popLast() {
         tail = temp;
         return data;
     }
+}
+
+public Node<T> search(T searchData){
+  Node<T> temp = head;
+  while(temp != null) {
+      if (temp.getKey().equals(searchData))
+          return temp;
+      temp = (Node<T>) temp.getNext();
+  }
+	return null;
 }
 
 public void show() {

@@ -45,10 +45,12 @@ public class LinkedListMain {
     else
         System.out.println("Popped element => " + popLast);
     list3.show();
-
-    System.out.println();
-	
-	}
-    
+    Node<Integer> search = list1.search(47);
+    if (search == null)
+        System.out.println("Element Not Found!");
+    else
+        System.out.println("Element Found");
+    list1.show();
+	}    
 	}
 
