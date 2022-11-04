@@ -31,7 +31,6 @@ public class LinkedListMain {
 	list4.insert(70);
 	list4.show();
 	
-	LinkedList<Integer> list5 = new LinkedList<>();
 	System.out.println("Linked List:");
 	Integer pop = list4.pop(56);
 	if (pop == null)
@@ -39,8 +38,17 @@ public class LinkedListMain {
     else
         System.out.println("Popped element => " + pop);
     list4.show();
+    System.out.println("Removed last element in Linked List:");
+	Integer popLast = list3.popLast();
+	if (popLast == null)
+        System.out.println("Empty list");
+    else
+        System.out.println("Popped element => " + popLast);
+    list3.show();
 
     System.out.println();
 	
 	}
-}
+    
+	}
+
