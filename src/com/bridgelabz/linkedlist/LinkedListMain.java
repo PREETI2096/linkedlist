@@ -21,5 +21,14 @@ public class LinkedListMain {
 	list3.append(30);
 	list3.append(70);
 	list3.show();
+	
+	LinkedList<Integer> list4 = new LinkedList<>();
+	list4.insert(56 );
+	list4.insert(40);
+	list4.insert(70);
+	list4.show();
+	//list4.insertBetween(70,30);
+	//list4.insertBetween(56,30);
+	//list4.show();
 	}
 }
